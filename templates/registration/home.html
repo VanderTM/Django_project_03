@@ -1,0 +1,17 @@
+
+
+{% if user.is_authenticated %}
+
+    <p>Hola{{user.username}}</p>
+    <p>Haz Clic en el siguiente enlace para ver los productos</p>
+    <a href="{% url 'product_list' %}">PC STORE</a>
+
+{% else %}
+
+    <p>Ingresa a Tu Cuenta</p>
+    <a href="{% url 'login' %}">Log In</a>
+    <p>Si no tienes Cuenta</p>
+    <a href="{% url 'signup' %}">Sign Up</a>
+
+{% endif %}
+
